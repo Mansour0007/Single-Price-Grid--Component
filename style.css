@@ -1,0 +1,128 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap");
+
+:root {
+  /* primary */
+  --Cyan: hsl(179, 62%, 43%);
+  --Bright-Yellow: hsl(71, 73%, 54%);
+
+  /* Neutral */
+  --Light-Gray: hsl(204, 43%, 93%);
+  --Grayish-Blue: hsl(218, 22%, 67%);
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Karla", sans-serif;
+  font-size: 16px;
+  background-color: var(--Light-Gray);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container {
+  max-width: 780px;
+  border-radius: 10px;
+  overflow: hidden;
+  /* box-shadow: 0 0 2px 0.1px; */
+}
+.wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.upper {
+  grid-column: span 2;
+  padding: 5%;
+  background-color: #ffffff;
+}
+.upper .big-title {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--Cyan);
+  margin-bottom: 20px;
+}
+.upper .small-title {
+  font-size: 20px;
+  font-weight: bold;
+  color: var(--Bright-Yellow);
+  margin-bottom: 15px;
+}
+.upper p {
+  color: var(--Grayish-Blue);
+  font-size: 20px;
+  line-height: 1.6;
+}
+.left-side {
+  padding: 10%;
+  background-color: var(--Cyan);
+  color: #ffffff;
+}
+.left-side h2 {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+.left-side .large-num {
+  font-size: 35px;
+  font-weight: 700;
+  margin-right: 10px;
+}
+.left-side .small-text {
+  color: hsl(179, 71%, 54%);
+  font-size: 20px;
+  margin-top: -15px;
+}
+.left-side p {
+  color: #ffffff;
+  margin-bottom: 25px;
+}
+.left-side button {
+  padding: 15px 100px 15px 100px;
+}
+.btn {
+  font-family: "Karla", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  color: #f4fccb;
+  background-color: var(--Bright-Yellow);
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+}
+.btn:hover {
+  color: rgb(141, 140, 140);
+  box-shadow: 0 0 1px 1px;
+}
+.right-side {
+  padding: 10%;
+  padding-right: 20%;
+  background-color: hsl(179, 55%, 51%);
+  color: #ffffff;
+}
+.right-side h2 {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+.right-side p {
+  color: hsl(179, 80%, 86%);
+  line-height: 1.6;
+}
+@media (max-width: 375px), (max-width: 600px) {
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+  .upper {
+    padding: 10%;
+  }
+  .left-side button {
+    padding: 20px 120px 20px 120px;
+  }
+  .btn:hover {
+    display: none;
+  }
+}
